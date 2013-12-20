@@ -1,12 +1,12 @@
 all: installed
 
 TARBALL = build/ConvexDecomposition.zip
-TARBALL_URL = http://pr.willowgarage.com/downloads/ConvexDecomposition.zip
+TARBALL_URL = http://static.strawlab.org/downloads/ConvexDecomposition.zip
 SOURCE_DIR = build/convex_decomposition
 INITIAL_DIR = build/ConvexDecomposition
 UNPACK_CMD = unzip
 TARBALL_PATCH=convex_decomposition.patch
-MD5SUM_FILE = ../ConvexDecomposition.zip.md5sum
+MD5SUM_FILE = $(shell rospack find convex_decomposition)/ConvexDecomposition.zip.md5sum
 
 include $(shell rospack find mk)/download_unpack_build.mk
 
